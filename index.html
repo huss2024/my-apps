@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Apps — Free Android Tools</title>
-    <meta name="description" content="Free, privacy-focused Android apps. ScanBolt QR Scanner and SpeedPulse Speed Test. No tracking, no accounts required.">
+    <meta name="description" content="Free, privacy-focused Android apps: ScanBolt QR Scanner, SpeedPulse Speed Test, and VaultX Password Manager. No accounts required.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -76,6 +76,15 @@
             box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
         }
 
+        .app-card.vaultx {
+            border: 1px solid rgba(18, 107, 80, 0.35);
+        }
+        .app-card.vaultx:hover {
+            transform: translateY(-6px);
+            border-color: rgba(86, 210, 164, 0.65);
+            box-shadow: 0 12px 40px rgba(18, 107, 80, 0.18);
+        }
+
         .app-icon { font-size: 48px; }
 
         .app-card h2 {
@@ -107,6 +116,11 @@
         .speedpulse .app-badge {
             background: rgba(0, 212, 255, 0.15);
             color: #00D4FF;
+        }
+
+        .vaultx .app-badge {
+            background: rgba(86, 210, 164, 0.14);
+            color: #56D2A4;
         }
 
         .footer {
@@ -156,6 +170,14 @@
                 <h2>SpeedPulse</h2>
                 <p class="app-desc">Beautiful WiFi & internet speed test with animated speedometer. Test download, upload, and ping instantly.</p>
                 <span class="app-badge">SPEED TEST</span>
+            </a>
+
+            <!-- VaultX -->
+            <a href="vaultx/" class="app-card vaultx">
+                <div class="app-icon">🔐</div>
+                <h2>VaultX</h2>
+                <p class="app-desc">Offline password manager for logins, private notes, and card notes stored in one local encrypted vault.</p>
+                <span class="app-badge">PASSWORD MANAGER</span>
             </a>
         </div>
 
