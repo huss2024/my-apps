@@ -1,195 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Apps — Free Android Tools</title>
-    <meta name="description" content="Free, privacy-focused Android apps: ScanBolt QR Scanner, SpeedPulse Speed Test, and VaultX Password Manager. No accounts required.">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Apps - Free Android Tools</title>
+    <meta name="description" content="Free Android apps: ScanBolt QR Scanner, SpeedPulse Speed Test, VaultX Password Manager, and PDF Toolkit. No accounts required." />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0A0A14;
-            color: #E0E0F0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2.4rem;
-            font-weight: 900;
-            color: #FFFFFF;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #888;
-            font-size: 1.05rem;
-            margin-bottom: 50px;
-        }
-
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
-            margin-bottom: 60px;
-        }
-
-        .app-card {
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            padding: 36px 28px;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .app-card.scanbolt {
-            border: 1px solid rgba(108, 92, 231, 0.2);
-        }
-        .app-card.scanbolt:hover {
-            transform: translateY(-6px);
-            border-color: rgba(108, 92, 231, 0.5);
-            box-shadow: 0 12px 40px rgba(108, 92, 231, 0.15);
-        }
-
-        .app-card.speedpulse {
-            border: 1px solid rgba(0, 212, 255, 0.2);
-        }
-        .app-card.speedpulse:hover {
-            transform: translateY(-6px);
-            border-color: rgba(0, 212, 255, 0.5);
-            box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
-        }
-
-        .app-card.vaultx {
-            border: 1px solid rgba(18, 107, 80, 0.35);
-        }
-        .app-card.vaultx:hover {
-            transform: translateY(-6px);
-            border-color: rgba(86, 210, 164, 0.65);
-            box-shadow: 0 12px 40px rgba(18, 107, 80, 0.18);
-        }
-
-        .app-icon { font-size: 48px; }
-
-        .app-card h2 {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #FFFFFF;
-        }
-
-        .app-card .app-desc {
-            color: #8888AA;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        .app-card .app-badge {
-            display: inline-block;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .scanbolt .app-badge {
-            background: rgba(108, 92, 231, 0.15);
-            color: #A29BFE;
-        }
-
-        .speedpulse .app-badge {
-            background: rgba(0, 212, 255, 0.15);
-            color: #00D4FF;
-        }
-
-        .vaultx .app-badge {
-            background: rgba(86, 210, 164, 0.14);
-            color: #56D2A4;
-        }
-
-        .footer {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            color: #555577;
-            font-size: 0.85rem;
-        }
-
-        .footer a { color: #888; text-decoration: none; }
-        .footer a:hover { text-decoration: underline; color: #aaa; }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-
-        @media (max-width: 600px) {
-            .container { padding: 40px 16px; }
-            h1 { font-size: 1.8rem; }
-            .apps-grid { grid-template-columns: 1fr; }
-        }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: Arial, sans-serif;
+        background: #080b16;
+        color: #eef2ff;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 56px 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #ffffff;
+        font-size: clamp(34px, 7vw, 56px);
+        font-weight: 900;
+        letter-spacing: 0;
+        line-height: 1.05;
+        margin-bottom: 12px;
+      }
+      .subtitle {
+        color: #aeb8cc;
+        font-size: 18px;
+        margin-bottom: 38px;
+      }
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin-bottom: 42px;
+      }
+      .app-card {
+        background: #111827;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 8px;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-height: 250px;
+        padding: 28px 22px;
+        text-align: left;
+        text-decoration: none;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .app-card:hover {
+        border-color: rgba(255, 255, 255, 0.35);
+        box-shadow: 0 14px 42px rgba(0, 0, 0, 0.24);
+        transform: translateY(-4px);
+      }
+      .app-icon {
+        align-items: center;
+        border-radius: 8px;
+        display: flex;
+        font-size: 18px;
+        font-weight: 900;
+        height: 58px;
+        justify-content: center;
+        width: 58px;
+      }
+      .scanbolt .app-icon { background: #6c5ce7; color: #ffffff; }
+      .speedpulse .app-icon { background: #00b8d9; color: #041018; }
+      .vaultx .app-icon { background: #56d2a4; color: #04140f; }
+      .pdftoolkit .app-icon { background: #37d3c7; color: #06111f; }
+      h2 {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.15;
+      }
+      .app-desc {
+        color: #aeb8cc;
+        font-size: 15px;
+      }
+      .app-badge {
+        border-radius: 999px;
+        display: inline-flex;
+        font-size: 12px;
+        font-weight: 800;
+        justify-content: center;
+        margin-top: auto;
+        padding: 7px 12px;
+        width: fit-content;
+      }
+      .scanbolt .app-badge { background: rgba(108, 92, 231, 0.18); color: #b9b0ff; }
+      .speedpulse .app-badge { background: rgba(0, 184, 217, 0.18); color: #73e9ff; }
+      .vaultx .app-badge { background: rgba(86, 210, 164, 0.18); color: #98f0cc; }
+      .pdftoolkit .app-badge { background: rgba(55, 211, 199, 0.18); color: #8cf3eb; }
+      .footer {
+        border-top: 1px solid rgba(148, 163, 184, 0.14);
+        color: #77839a;
+        font-size: 14px;
+        padding-top: 24px;
+      }
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        justify-content: center;
+        margin-bottom: 12px;
+      }
+      a { color: #8cf3eb; }
+      .footer a { color: #aeb8cc; text-decoration: none; }
+      .footer a:hover { text-decoration: underline; }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="container">
-        <h1>🚀 Our Apps</h1>
-        <p class="subtitle">Free, privacy-focused Android tools. No tracking. No accounts.</p>
+      <h1>Our Apps</h1>
+      <p class="subtitle">Free Android tools with no account required.</p>
 
-        <div class="apps-grid">
-            <!-- ScanBolt -->
-            <a href="https://huss2024.github.io/my-apps/" class="app-card scanbolt" onclick="this.href='https://expo.dev/artifacts/eas/fyTwJy74VjLMfkgCUD4615.apk'">
-                <div class="app-icon">⚡</div>
-                <h2>ScanBolt</h2>
-                <p class="app-desc">Lightning-fast QR code & barcode scanner. Scan, create, and organize codes with a beautiful dark interface.</p>
-                <span class="app-badge">QR & BARCODE SCANNER</span>
-            </a>
+      <div class="apps-grid">
+        <a href="./" class="app-card scanbolt">
+          <div class="app-icon">QR</div>
+          <h2>ScanBolt</h2>
+          <p class="app-desc">QR code and barcode scanner for quick everyday scanning, code creation, and local scan history.</p>
+          <span class="app-badge">QR SCANNER</span>
+        </a>
 
-            <!-- SpeedPulse -->
-            <a href="speedpulse/" class="app-card speedpulse">
-                <div class="app-icon">🚀</div>
-                <h2>SpeedPulse</h2>
-                <p class="app-desc">Beautiful WiFi & internet speed test with animated speedometer. Test download, upload, and ping instantly.</p>
-                <span class="app-badge">SPEED TEST</span>
-            </a>
+        <a href="speedpulse/" class="app-card speedpulse">
+          <div class="app-icon">SP</div>
+          <h2>SpeedPulse</h2>
+          <p class="app-desc">WiFi and internet speed test with download, upload, ping, network details, and local test history.</p>
+          <span class="app-badge">SPEED TEST</span>
+        </a>
 
-            <!-- VaultX -->
-            <a href="vaultx/" class="app-card vaultx">
-                <div class="app-icon">🔐</div>
-                <h2>VaultX</h2>
-                <p class="app-desc">Offline password manager for logins, private notes, and card notes stored in one local encrypted vault.</p>
-                <span class="app-badge">PASSWORD MANAGER</span>
-            </a>
+        <a href="vaultx/" class="app-card vaultx">
+          <div class="app-icon">VX</div>
+          <h2>VaultX</h2>
+          <p class="app-desc">Offline password manager for logins, private notes, and card notes stored in a local encrypted vault.</p>
+          <span class="app-badge">PASSWORD MANAGER</span>
+        </a>
+
+        <a href="pdftoolkit/" class="app-card pdftoolkit">
+          <div class="app-icon">PDF</div>
+          <h2>PDF Toolkit</h2>
+          <p class="app-desc">Open, merge, split, optimize, and convert PDF files with practical document tools.</p>
+          <span class="app-badge">PDF TOOLS</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="app-ads.txt">app-ads.txt</a>
+          <a href="mailto:nurbeshir2023@gmail.com">Contact</a>
         </div>
-
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="app-ads.txt">app-ads.txt</a>
-                <a href="mailto:nurbeshir2023@gmail.com">Contact</a>
-            </div>
-            <p>&copy; 2026 All rights reserved. Developer: Hussien Mohammednur Beshir</p>
-        </footer>
+        <p>Copyright 2026. Developer: Hussien Mohammednur Beshir</p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>
+
